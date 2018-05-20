@@ -1,6 +1,6 @@
 ### kgbook blog
 
-[kgbook](http://kgbook.io)
+[kgbook](https://kgbook.github.io)
 
 
 #### 感谢   
