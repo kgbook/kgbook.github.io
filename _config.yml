@@ -6,30 +6,27 @@ description: 欢迎来到我的个人站~
 avatarTitle: kgbook
 # 头像里面的描述
 avatarDesc: 嵌入式 / 音视频
-url: "http://kgbook.io"
+url: "https://kgbook.github.io"
 
 # Comment
 comment:
-    disqus: kgbook
+    disqus: kgsz
     # uyan: 2143225  # 有言id,登录有言官网申请
 
 # Social
 social:
-    #weibo: 13537659629 
     github: kgbook
-    # twitter: 
+    twitter: szLens
     mail: kgbook.sz@gmail.com
 
 # 百度统计 
 # 使用博客模板请去掉或者更换 id 
 baidu:
-    #id: 8ba1c6be0953b6f9c2ba38e57f615421  
     id: 5cc7ee8be5e4a80904d54085d3792429 
 
 # Google Analytics
 # 使用博客模板请去掉或者更换 id
 ga:
-    #id: UA-84134159-3   
     id: UA-119603019-1
     host: auto  
 
