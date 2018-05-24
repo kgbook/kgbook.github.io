@@ -27,7 +27,7 @@ Killed process 83 (DCam) total-vm:815212kB, anon-rss:108000kB, file-rss:264kB
 针对问题（1），Linux 上电后各项业务尚未完全跑起来就被 Kill 了，主要媒体以及UI模块耗内存较多，属于典型的内存不足。调整内存布局，从 LiteOS MMZ 划分出 50MB 给到 Linux MMZ，该问题得到解决。
 
 ## 内存泄漏， 段错误等
-问题（2），由 segment fault，Memory Leak等众多因素引起。
+问题（2），由 segment fault，memory leak等众多因素引起。
 
 ### Segment Fault
 
@@ -50,11 +50,11 @@ Proc信息显示DCam进程回放前占用物理内存48244 kB
 
 ![image][beforePlayback]
 
-回放后，占用124844kB！
+视频回放，多次切换视频文件，DCam进程占用物理内存124844kB！
 
 ![image][afterPlayback]
 
-DCam 进程占用内存不断增长。
+即DCam 进程占用内存不断增长。
 
 需要特别注意的，ffmpeg 解封装 lib 库更新前只解码大码流那路 video track，更新为强制解码小码流的 video track，才频繁出现的回放 OOM 问题。
 
