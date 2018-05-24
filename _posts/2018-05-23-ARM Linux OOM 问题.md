@@ -2,8 +2,7 @@
 layout: post
 title: ARM Linux OOM 问题
 date: 2018-05-20
-category: arm-linux 
-tags:  [arm-linux, OOM]
+tags:  [arm-linux]
 ---
 
 最近在开发一款流媒体后视镜产品，发现触摸设备不响应触控事件，画面冻住不动，串口日志提示Out of Memory。
