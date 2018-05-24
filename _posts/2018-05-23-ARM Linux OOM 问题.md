@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ARM Linux OOM 问题
-date: 2018-05-20
+date: 2018-05-23
 tags:  [arm-linux]
 ---
 
