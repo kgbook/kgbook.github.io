@@ -5,7 +5,7 @@ date: 2018-05-23
 tags:  [arm-linux]
 ---
 
-最近在开发一款流媒体后视镜产品，发现触摸设备不响应触控事件，画面冻住不动，串口日志提示Out of Memory。
+最近在开发一款流媒体后视镜产品，发现触摸设备不响应触控事件，画面冻住不动，串口日志提示Out of memory。而 release 版本看门狗程序未被注释（进入了编译分支），APP 进程因为 OOM 被 kill ，无法及时喂狗，导致系统不断重启 。
 
 OOM 的主要场景：
 
@@ -26,16 +26,8 @@ Killed process 83 (DCam) total-vm:815212kB, anon-rss:108000kB, file-rss:264kB
 
 针对问题（1），Linux 上电后各项业务尚未完全跑起来就被 Kill 了，主要媒体以及UI模块耗内存较多，属于典型的内存不足。调整内存布局，从 LiteOS MMZ 划分出 50MB 给到 Linux MMZ，该问题得到解决。
 
-## 内存泄漏， 段错误等
-问题（2），由 segment fault，memory leak等众多因素引起。
-
-### Segment Fault
-
-主要调试手段：
-* 生成coredump文件，gdb查看call stack。
-* `-Werror` 提高编译告警等级，清理编译告警。
-
-### Memory Leak
+## 内存泄漏
+问题（2），由 memory leak 引起。
 
 后台监控进程占用内存信息：
 ```
