@@ -2,7 +2,7 @@
 layout: post
 title: ARM Linux OOM 问题
 date: 2018-05-23
-tags:  [arm-linux]
+tags: [嵌入式/Linux]
 ---
 
 最近在开发一款流媒体后视镜产品，发现触摸设备不响应触控事件，画面冻住不动，串口日志提示Out of memory。而 release 版本看门狗程序未被注释（进入了编译分支），APP 进程因为 OOM 被 kill ，无法及时喂狗，导致系统不断重启 。
