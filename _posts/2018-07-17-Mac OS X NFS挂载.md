@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mac OS X NFS 挂载
-date: 2018-07-18
+date: 2018-07-17
 tags: [数据通信]
 ---
 
