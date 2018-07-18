@@ -36,15 +36,6 @@ kang:~ kang$ cat /etc/exports
 /Users/kang/project -maproot=root:wheel -network 10.2.11.0 -mask 255.255.255.0
 ```
 
-设备端挂载，`mount -t nfs -o nolock 10.2.8.12:/Users/kang/project /home/nfs`。
-
-打印所有挂载信息:
-```shell
-kang:~ kang$ showmount -a
-All mounts on localhost:
-10.2.11.186:/Users/kang/project
-```
-
 ### 网络配置
 
 Mac:
@@ -87,7 +78,7 @@ round-trip min/avg/max/stddev = 2.514/2.708/2.903/0.195 ms
 
 如果两者网络号相同，则为同一网段；ip 与 netmask按位与的运算结果即为网络号（network id）。
 
-Mac
+Mac:
 > ip：10.2.8.12, netmask:0xfffffc00
 ```python
 >>> 11 & 252
@@ -95,7 +86,7 @@ Mac
 ```
 网络号为：10.2.8.0
 
-arm-linux device 
+arm-linux device:
 >ip:10.2.11.186 netmask:255.255.252.0
 ```python
 >>> 8 & 0xfc
@@ -104,6 +95,16 @@ arm-linux device
 网络号为：10.2.8.0
 
 mac 设备和板端的网络号一致，认为两设备在同一网段。
+
+### NFS挂载
+设备端挂载，`mount -t nfs -o nolock 10.2.8.12:/Users/kang/project /home/nfs`。
+
+打印所有挂载信息:
+```shell
+kang:~ kang$ showmount -a
+All mounts on localhost:
+10.2.11.186:/Users/kang/project
+```
 
 ### 参考资料
 - [OS X Server：如何配置 NFS exports](https://support.apple.com/zh-cn/HT202243)
