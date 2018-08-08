@@ -8,10 +8,12 @@ tags: [数据通信]
 ### 配置`/etc/exports`
 
 - 创建`/etc/exports`
+
 ```shell
 sudo touch /etc/exports
 sudo chmod +rwx /etc/exports
 ```
+
 - 配置`/etc/exports`
   - `-maproot=user`，配置nfs登陆的用户、用户组
 >-maproot=user The credential of the specified user is used for remote access by root.  The credential includes all the groups to which the user is a member on the local machine (
@@ -31,6 +33,7 @@ wheel daemon kmem sys tty operator procview procmod everyone staff certusers loc
      within an administrative sub-net.
 
 我们使用的第三种方式; nfs主要用于局域网共享数据，需注意和设备端网段保持一致。
+
 ```shell
 kang:~ kang$ cat /etc/exports
 /Users/kang/project -maproot=root:wheel -network 10.2.11.0 -mask 255.255.255.0
@@ -39,6 +42,7 @@ kang:~ kang$ cat /etc/exports
 ### 网络配置
 
 Mac:
+
 ```shell
 kang:~ kang$ ifconfig en0
 en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
@@ -49,6 +53,7 @@ en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
 	media: autoselect
 	status: active
 ```
+
 arm-linux device: 
 
 ```shell
@@ -63,7 +68,9 @@ eth0      Link encap:Ethernet  HWaddr E6:74:FC:61:62:2A
           RX bytes:22524298 (21.4 MiB)  TX bytes:4528148 (4.3 MiB)
           Interrupt:57 
 ```
+
 首先，确认是否能ping通：
+
 ```shell
 kang:~ kang$ ping 10.2.11.186
 PING 10.2.11.186 (10.2.11.186): 56 data bytes
@@ -74,32 +81,41 @@ PING 10.2.11.186 (10.2.11.186): 56 data bytes
 2 packets transmitted, 2 packets received, 0.0% packet loss
 round-trip min/avg/max/stddev = 2.514/2.708/2.903/0.195 ms
 ```
+
 可以ping通，确认是否同一网段：
 
 如果两者网络号相同，则为同一网段；ip 与 netmask按位与的运算结果即为网络号（network id）。
 
 Mac:
+
 > ip：10.2.8.12, netmask:0xfffffc00
+
 ```python
 >>> 11 & 252
 8
 ```
+
 网络号为：10.2.8.0
 
 arm-linux device:
+
 >ip:10.2.11.186 netmask:255.255.252.0
+
 ```python
 >>> 8 & 0xfc
 8
 ```
+
 网络号为：10.2.8.0
 
 mac 设备和板端的网络号一致，认为两设备在同一网段。
 
 ### NFS挂载
+
 设备端挂载，`mount -t nfs -o nolock 10.2.8.12:/Users/kang/project /home/nfs`。
 
 打印所有挂载信息:
+
 ```shell
 kang:~ kang$ showmount -a
 All mounts on localhost:
@@ -107,6 +123,7 @@ All mounts on localhost:
 ```
 
 ### 参考资料
+
 - [OS X Server：如何配置 NFS exports](https://support.apple.com/zh-cn/HT202243)
 - [How to determine whether two IP addresses belong to the same network segment](https://stackoverflow.com/questions/13148747/determining-if-two-ip-adresses-are-on-same-subnet-is-it-leading-or-trailing-0s)
 - `man exports`

@@ -4,6 +4,7 @@ title: C++ far over C
 date: 2018-08-08
 tags: [编程语言]
 ---
+
 ### C++ 建议使用 `const` 常量或` enum` 枚举，而不是 `#define` 宏. ###
 
 ```cpp
@@ -46,6 +47,7 @@ inline int max(int a, int b){
 ```
 
 区别如下：
+
 1. 宏定义容易出错，预处理器在拷贝、替换宏代码的时候常常出现意想不到的边际效应。
 
 ```cpp
