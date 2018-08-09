@@ -5,16 +5,16 @@ date: 2018-07-18
 tags: [数据通信]
 ---
 
-### 配置`/etc/exports`
+### 配置/etc/exports
 
-- 创建`/etc/exports`
+- 创建 /etc/exports
 
 ```shell
 sudo touch /etc/exports
 sudo chmod +rwx /etc/exports
 ```
 
-- 配置`/etc/exports`
+- 配置 /etc/exports
   - `-maproot=user`，配置nfs登陆的用户、用户组
 >-maproot=user The credential of the specified user is used for remote access by root.  The credential includes all the groups to which the user is a member on the local machine (
      see id(1) ). The user may be specified by name or number.
@@ -25,7 +25,7 @@ sudo chmod +rwx /etc/exports
 kang:kang root# groups
 wheel daemon kmem sys tty operator procview procmod everyone staff certusers localaccounts admin com.apple.sharepoint.group.1 _appstore _lpadmin _lpoperator _developer _analyticsusers com.apple.access_ftp com.apple.access_screensharing com.apple.access_ssh
 ```
-  - `-network`配置subnetwork
+  - `-network` 配置subnetwork
 >The third component of a line specifies the host set to which the line applies.  The set may be specified in three ways.  The first way is to list the host name(s) separated by
      white space.  (Standard internet IPv4 ``dot'' addresses or IPv6 colon addresses may be used in place of names.)  The second way is to specify a ``netgroup'' as defined in the
      netgroup file (see netgroup(5) ). The third way is to specify an internet sub-network using a network and network mask that is defined as the set of all hosts with addresses
@@ -91,7 +91,7 @@ Mac:
 > ip：10.2.8.12, netmask:0xfffffc00
 
 ```python
->>> 11 & 252
+>>> 8 & 0xfc
 8
 ```
 
@@ -102,7 +102,7 @@ arm-linux device:
 >ip:10.2.11.186 netmask:255.255.252.0
 
 ```python
->>> 8 & 0xfc
+>>> 11 & 252
 8
 ```
 
