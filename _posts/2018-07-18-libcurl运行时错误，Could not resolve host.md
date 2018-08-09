@@ -1,6 +1,6 @@
 ---
 layout: post
-title: libcurl运行时报错"Cloud not resolve hos"
+title: libcurl运行时报错"Cloud not resolve host"
 date: 2018-07-18
 tags: [数据通信]
 ---
