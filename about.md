@@ -3,7 +3,7 @@ layout: page
 title: About 
 ---
 
-`kgbook == kg + book`, origin from "Quantitative lead to qualitative change".
+`kgbook == kg + book`, origin from "Quantitative lead to qualitative change" and "knowledge alters destiny".
 
 Believe in "Up or Out" Policies, and promote myself consistently.
 
