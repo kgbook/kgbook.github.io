@@ -2,7 +2,9 @@
 layout: post
 title: C++ far over C
 date: 2018-08-08
-tags: [编程语言]
+tags: 
+- 编程语言
+- C++
 ---
 
 ### C++ 建议使用 `const` 常量或` enum` 枚举，而不是 `#define` 宏. ###

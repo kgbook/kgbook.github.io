@@ -2,7 +2,10 @@
 layout: post
 title: libcurl运行时报错"Cloud not resolve host"
 date: 2018-07-18
-tags: [数据通信]
+tags: 
+- 数据通信
+- HTTPS 
+- 嵌入式/Linux
 ---
 ### 现象
 - 设备端运行程序，报错 "Could not resolve host: api.bi.tuputech.com"。
