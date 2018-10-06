@@ -2,7 +2,8 @@
 layout: post
 title: Mac OS X NFS 挂载
 date: 2018-07-18
-tags: [数据通信]
+tags: 
+- 数据通信
 ---
 
 ### 配置/etc/exports
