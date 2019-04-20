@@ -2,5 +2,5 @@
 
 ### Contact ###
 ```shell
-echo "a2dib29rLnN6QGdtYWlsLmNvbQo=" | base64 --decode
+echo "a2dib29rQGNvb2x0bXV4LmNvbQ==" | base64 --decode
 ```

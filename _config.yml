@@ -1,24 +1,24 @@
 # Site settings
-title: kgbook Blog
-SEOTitle: 康登立的博客 | kgbook Blog
+title: kgbook
+SEOTitle: cooltmux | cooltmux
 header-img: img/home-bg.jpg
-email: kgbook.sz@gmail.com
+email: kgbook@cooltmux.com
 description: "关于程序与设计 | 康登立，Web & Mobile Lover，Software Engineer，Embedded Developer | 这里是 @kgbook康登立 的个人博客，与你一起发现更大的世界。"
 keyword: "康登立, kgbook康登立, kgbook, alpha, kgbook, @kgbook, 康登立的博客, kgbook Blog, 博客, 个人网站, 嵌入式, 后台, Unix/Linux"
-#url: "https://huangxuan.me"              # your host, for absolute URL
+url: "https://www.cooltmux.com"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
 future: true
 
 # SNS settings
-RSS: false
+RSS: true
 weibo_username:     6345151606
 zhihu_username:     kgbook
 github_username:    kgbook
 twitter_username:   szLens
 stackoverflow_username: kgbook
-#facebook_username:  huxpro
+facebook_username:  kang.alpha.98
 #linkedin_username:  firstname-lastname-idxxxx
 
 
@@ -72,8 +72,8 @@ netease_comment: false
 # ba_track_id: [your track id]
 
 # Google Analytics
-ga_track_id: 'UA-119603019-1'            # Format: UA-xxxxxx-xx
-#ga_domain: huangxuan.me
+ga_track_id: 'UA-119603019-1'            # Format: UA-xxxxxx-xxxxxx
+ga_domain: cooltmux.com
 
 
 
