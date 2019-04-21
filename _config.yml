@@ -1,7 +1,7 @@
 # Site settings
 title: kgbook
 SEOTitle: cooltmux | cooltmux
-header-img: img/home-bg.jpg
+header-img: img/StatueOfLliberty.jpeg
 email: kgbook@cooltmux.com
 description: "关于程序与设计 | 康登立，Web & Mobile Lover，Software Engineer，Embedded Developer | 这里是 @kgbook康登立 的个人博客，与你一起发现更大的世界。"
 keyword: "康登立, kgbook康登立, kgbook, alpha, kgbook, @kgbook, 康登立的博客, kgbook Blog, 博客, 个人网站, 嵌入式, 后台, Unix/Linux"
@@ -13,12 +13,12 @@ future: true
 
 # SNS settings
 RSS: true
-weibo_username:     6345151606
-zhihu_username:     kgbook
+#weibo_username:     6345151606
+#zhihu_username:     kgbook
 github_username:    kgbook
 twitter_username:   szLens
 stackoverflow_username: kgbook
-facebook_username:  kang.alpha.98
+#facebook_username:  kang.alpha.98
 #linkedin_username:  firstname-lastname-idxxxx
 
 
@@ -73,7 +73,7 @@ netease_comment: false
 
 # Google Analytics
 ga_track_id: 'UA-119603019-1'            # Format: UA-xxxxxx-xxxxxx
-ga_domain: cooltmux.com
+#ga_domain: cooltmux.com
 
 
 
